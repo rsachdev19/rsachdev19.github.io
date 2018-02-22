@@ -1,7 +1,0 @@
-body {
-	background:#999;
-}
-
-span + span {
-    margin-left: 15px;
-}
