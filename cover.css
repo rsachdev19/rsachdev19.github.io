@@ -28,7 +28,9 @@ html,
 body {
   height: 100%;
   background-color: #333;
-  background-image: url("fd.jpg");
+  /*background-image: url("fd.jpg");*/
+  /*background-image: url("eclipse1.jpeg");*/
+  background-image: url("sunset.jpg");
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,6 +62,7 @@ body {
 
 .masthead-brand {
   margin-bottom: 0;
+  margin-right: 200px;
 }
 
 .nav-masthead .nav-link {
