@@ -1066,6 +1066,7 @@ html, body {
   padding: 0;
   border: none;
   height: 100%;
+  background-color: #fff;
 }
 
 /* Nunito Sans for the font */
@@ -1078,6 +1079,8 @@ body {
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   color: #374054;
+  background-color: #fff;
+  /*color: #fff;*/
 }
 
 /* remove bullets from unordered lists */
@@ -1158,6 +1161,7 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+
 }
 
 h3 {
@@ -1191,10 +1195,15 @@ strong {
 .content h4,
 .content h5,
 .content h6 {
-    color: #363636;
+    /*color: #363636;*/
+    color: #111;
     line-height: 1.125em;
     margin: 1rem 0;
 }
+
+/*.content {
+  background-color: #fff;
+}*/
 
 .title {
   font-weight: bolder;
@@ -1220,10 +1229,12 @@ p, article, blockquote {
 }
 
 .content > p:first-of-type {
+  color: #111;
   margin-top: 2rem;
 }
 
 .content > p:last-of-type {
+  color: #111;
   margin-bottom: 2rem;
 }
 
@@ -2510,6 +2521,7 @@ section {
   display: -ms-flexbox;
   display: flex;
 }
+
 
 space {
   display: block;
