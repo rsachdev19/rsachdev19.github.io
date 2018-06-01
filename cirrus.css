@@ -3751,6 +3751,13 @@ video.video-fullscreen {
     padding: .5rem;
     width: 100%;
 }
+
+.round-img {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+}
+
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
     position: fixed; /* Scrolls with the user */
