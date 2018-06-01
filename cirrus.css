@@ -3756,7 +3756,8 @@ video.video-fullscreen {
   height: 350px;
   width: 350px;
   border-radius: 50%;
-  border-collapse: separate; 
+  /*border-collapse: separate; */
+  overflow: hidden;
 }
 
 /* The base of the modal dialog, which is an overlay of the webpage */
