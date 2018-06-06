@@ -2474,7 +2474,7 @@ section {
 }
 
 .panel {
-    padding: 2.5em 0;
+    padding: 2.5em 2em;
 }
 
 /* This works well with spans and maybe even hr */
