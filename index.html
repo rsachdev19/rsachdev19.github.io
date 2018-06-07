@@ -7,14 +7,15 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="cirrus.css" type="text/css" rel="stylesheet" />
     <link href="test.css" type="text/css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/a696b91557.js"></script>    
+    <script src="https://use.fontawesome.com/a696b91557.js"></script>
+       
 </head>
 
 <body>
     <div class="header header-fixed unselectable header-animated fill-height">
     	<div class="nav-item">
-    		<!--<button class="btn"">Toggle Night Mode
-    		</button>-->
+    		<button class="btn" onclick="dark()">Toggle Night Mode
+    		</button>
     	</div>
         <div class="nav-right">
             <div class="nav-item selected">
@@ -128,6 +129,18 @@
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../demo_res/js/test.js"></script>
+    <script>
+	    function dark() {
+	        if (document.body.style.backgroundColor == 'rgb(255, 255, 255)') {
+
+	                document.body.style.backgroundColor = '#000';
+	        }
+	        else {
+	                document.body.style.backgroundColor = 'rgb(255, 255, 255)';
+	        }
+	    }
+    </script> 
+
 </body>
 
 	<footer>
