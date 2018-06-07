@@ -4,7 +4,7 @@ if(isset($_POST['email'])) {
     // CHANGE THE TWO LINES BELOW
     $email_to = "ravsachdev@gmail.com";
      
-    //$email_subject = "website html form submissions";
+    $email_subject = "website html form submissions";
      
      
     function died($error) {
@@ -17,14 +17,14 @@ if(isset($_POST['email'])) {
     }
      
     // validation expected data exists
-    if(!isset($_POST['first_name']) ||
-        !isset($_POST['email_subject']) ||
+    if(!isset($_POST['name']) ||
         !isset($_POST['email']) ||
+        !isset($_POST['email_subject']) ||
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
      
-    $first_name = $_POST['first_name']; // required
+    $first_name = $_POST['name']; // required
     $email_subject = $_POST['email_subject']; // required
     $email_from = $_POST['email']; // required
     $comments = $_POST['comments']; // required
@@ -38,9 +38,7 @@ if(isset($_POST['email'])) {
   if(!preg_match($string_exp,$name)) {
     $error_message .= 'The Name you entered does not appear to be valid.<br />';
   }
-  // if(!preg_match($string_exp,$last_name)) {
-  //   $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  // }
+
   if(strlen($comments) < 2) {
     $error_message .= 'The Comments you entered do not appear to be valid.<br />';
   }
