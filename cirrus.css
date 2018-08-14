@@ -1209,7 +1209,7 @@ strong {
 .content h5,
 .content h6 {
     /*color: #363636;*/
-    color: #111;
+    /*color: #111;*/
     line-height: 1.125em;
     margin: 1rem 0;
 }
@@ -1222,6 +1222,10 @@ strong {
   font-weight: bolder;
 }
 
+.title, .sub-title {
+  text-shadow: 2px 2px #000000;
+}
+
 .title:not(:last-child), .subtitle:not(:last-child) {
     margin-bottom: 1rem;
 }
@@ -1230,9 +1234,10 @@ strong {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.title + .subtitle { /* Make the subtitlte closer to the title */
+.title + .subtitle { /* Make the subtitle closer to the title */
     margin-top: -1.25rem;
     font-size: 90%;
+    
 }
 
 p, article, blockquote {
@@ -1303,7 +1308,7 @@ cite {
 }
 
 .white {
-  color: #fff !important;
+  color: #fff;
 }
 
 .faded {
@@ -2043,6 +2048,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 
 .nav-item a {
     width: 100%;
+    color: #000000;
 }
 
 /* Hover effect for header elements when appropriate */
@@ -3906,7 +3912,7 @@ video.video-fullscreen {
     padding: 0.75rem;
     vertical-align: top;
     text-align: inherit;
-    margin: 0;
+    margin: 0;  
 }
 
 .table tr {
@@ -3940,7 +3946,7 @@ video.video-fullscreen {
 /* CUSTOM STYLES */
 /* All borders */
 .table.bordered td, .table.bordered th {
-  border: 1px solid rgba(219, 219, 219, 0.50);
+  border: 1px solid rgba(219, 219, 219, 1);
 }
 
 .table.bordered thead td, .table.borderd thead {
@@ -3986,6 +3992,11 @@ video.video-fullscreen {
 .table.borderless td {
     border: none;
 }
+
+.table img {
+  size: auto;
+}
+
 /* TABS AND TAB CONTAINER */
 .tab-container {
     display: -webkit-box;
@@ -4403,3 +4414,153 @@ video.video-fullscreen {
     display: none !important;
   }
 }
+
+
+.meter {
+  height: 20px;  /* Can be anything */
+  width: 200px;
+  position: relative;
+  margin: 150px 0 20px 0; /* Just for demo spacing */
+  background: #555;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+  -moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+  box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+  -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+}
+.meter > span {
+  margin-left: -10px;
+  margin-top: -10px;
+  display: block;
+  height: 100%;
+     -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+         -moz-border-radius-topright: 8px;
+      -moz-border-radius-bottomright: 8px;
+             border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+      -webkit-border-top-left-radius: 20px;
+   -webkit-border-bottom-left-radius: 20px;
+          -moz-border-radius-topleft: 20px;
+       -moz-border-radius-bottomleft: 20px;
+              border-top-left-radius: 20px;
+           border-bottom-left-radius: 20px;
+  background-color: rgb(43,194,83);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(43,194,83)),
+    color-stop(1, rgb(84,240,84))
+   );
+  background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+   );
+  -webkit-box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  -moz-box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: absolute;
+  overflow: hidden;
+}
+.meter > span:after, .animate > span > span {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image:
+     -webkit-gradient(linear, 0 0, 100% 100%,
+        color-stop(.25, rgba(255, 255, 255, .2)),
+        color-stop(.25, transparent), color-stop(.5, transparent),
+        color-stop(.5, rgba(255, 255, 255, .2)),
+        color-stop(.75, rgba(255, 255, 255, .2)),
+        color-stop(.75, transparent), to(transparent)
+     );
+  background-image:
+    -moz-linear-gradient(
+      -45deg,
+        rgba(255, 255, 255, .2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, .2) 50%,
+        rgba(255, 255, 255, .2) 75%,
+        transparent 75%,
+        transparent
+     );
+  z-index: 1;
+  -webkit-background-size: 50px 50px;
+  -moz-background-size: 50px 50px;
+  background-size: 50px 50px;
+  -webkit-animation: move 2s linear infinite;
+  -moz-animation: move 2s linear infinite;
+     -webkit-border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+         -moz-border-radius-topright: 8px;
+      -moz-border-radius-bottomright: 8px;
+             border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+      -webkit-border-top-left-radius: 20px;
+   -webkit-border-bottom-left-radius: 20px;
+          -moz-border-radius-topleft: 20px;
+       -moz-border-radius-bottomleft: 20px;
+              border-top-left-radius: 20px;
+           border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+.animate > span:after {
+  display: none;
+}
+
+@-webkit-keyframes move {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 50px 50px;
+    }
+}
+
+@-moz-keyframes move {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+       background-position: 50px 50px;
+    }
+}
+
+
+.orange > span {
+  background-color: #f1a165;
+  background-image: -moz-linear-gradient(top, #f1a165, #f36d0a);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f1a165),color-stop(1, #f36d0a));
+  background-image: -webkit-linear-gradient(#f1a165, #f36d0a);
+}
+
+.red > span {
+  background-color: #f0a3a3;
+  background-image: -moz-linear-gradient(top, #f0a3a3, #f42323);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f0a3a3),color-stop(1, #f42323));
+  background-image: -webkit-linear-gradient(#f0a3a3, #f42323);
+}
+
+.nostripes > span > span, .nostripes > span:after {
+  -webkit-animation: none;
+  -moz-animation: none;
+  background-image: none;
+}
+  
