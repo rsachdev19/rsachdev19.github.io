@@ -4418,9 +4418,9 @@ video.video-fullscreen {
 
 .meter {
   height: 20px;  /* Can be anything */
-  width: 200px;
+  width: 150px;
   position: relative;
-  margin: 150px 0 20px 0; /* Just for demo spacing */
+  margin: 0px 0 0px 0; /* Just for demo spacing */
   background: #555;
   -moz-border-radius: 25px;
   -webkit-border-radius: 25px;
